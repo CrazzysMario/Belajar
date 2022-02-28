@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .nav-container {
+        display: flex;
+        flex-flow: row wrap;
+        margin-bottom: 10px;
+        gap: 10px;
+      }
+
+      .nav-container .nav-item {
+        border: 1px solid;
+        padding: 10px 16px;
+        font-size: 1em;
+      }
+
+      .page-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .page-container .page-header {
+        flex-basis: 100%;
+        border: 1px solid;
+      }
+
+      .card-container {
+        display: flex;
+        flex-flow: row wrap;
+        border: 1px solid;
+        flex: 1 0;
+        justify-content: space-between;
+      }
+
+      ul {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 20px;
+      }
+    </style>
+
+    <div class="nav-container">
+      <div class="nav-item">Games</div>
+      <div class="nav-item">News</div>
+      <div class="nav-item">Standings</div>
+      <div class="nav-item">Stats</div>
+      <div class="nav-item">Players</div>
+    </div>
+    <div class="page-container">
+      <div class="page-header">Tanggal</div>
+      <div class="card-container">
+        <div class="card-item">
+          <ul>
+            <li>Team-1</li>
+            <li>Team-2</li>
+          </ul>
+        </div>
+        <div class="card-item">
+          <ul>
+            <li>Score</li>
+            <li>Tanggal</li>
+          </ul>
+        </div>
+        <div class="card-item">
+          <img src="img/nba-logo-1.jpeg" alt="" width="100px">
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card-item">
+          <ul>
+            <li>Team-1</li>
+            <li>Team-2</li>
+          </ul>
+        </div>
+        <div class="card-item">
+          <ul>
+            <li>Score</li>
+            <li>Tanggal</li>
+          </ul>
+        </div>
+        <div class="card-item">
+          <img src="img/nba-logo-1.jpeg" alt="" width="100px">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
