@@ -18,7 +18,7 @@
     <div class="page-container" id="tab-games">
       <div class="date">Date</div>
       <div class="card-container">
-        <div class="card">
+        <!--<div class="card">
           <div class="card-item">
             <ul>
               <li>Team-1</li>
@@ -68,7 +68,7 @@
           <div class="card-item">
             <img src="img/nba-logo-1.jpeg" alt="" width="100px" />
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="date">Date</div>
     </div>
@@ -79,9 +79,45 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../js/script.js"></script>
     <script>
+      var dataGames = [
+        {
+          team: ["Team 1", "Team 2"],
+          score: "Score",
+          date: "Date",
+        },
+        {
+          team: ["Team 1", "Team 2"],
+          score: "Score",
+          date: "Date",
+        },
+        {
+          team: ["Team 1", "Team 2"],
+          score: "Score",
+          date: "Date",
+        },
+      ];
+
+      dataGames.map((item) => {
+        let card = document.createElement("div");
+        card.className = "card";
+        let cardItem1 = document.createElement("div");
+        cardItem1.className = "card-item";
+        let itemLList = document.createElement("ul");
+        // itemLList.innerHTML = `<li>${item.team.map((team) => team)}</li>`;
+        let allGhaza = "";
+        item.team.map((team) => {
+          let ghaza = `<li>${team}</li>`;
+          allGhaza = allGhaza + ghaza;
+          itemLList.innerHTML = allGhaza;
+        });
+        cardItem1.append(itemLList);
+        card.append(cardItem1);
+        $(".card-container").append(card);
+      });
+
       function toggleTab(tabId) {
-        var navbar = $(".nav-item");
-        navbar.map(function (i) {
+        var navItem = $(".nav-item");
+        navItem.map(function (i) {
           if ($(this).data("id") === "menu-" + tabId) {
             $(this).addClass("active");
           } else {
