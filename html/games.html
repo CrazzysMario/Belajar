@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .nav-container {
+        display: flex;
+        flex-flow: row wrap;
+        margin-bottom: 10px;
+        gap: 10px;
+      }
+
+      .nav-container .nav-item {
+        border: 1px solid;
+        padding: 10px 16px;
+        font-size: 1em;
+      }
+
+      .page-container {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 20px;
+      }
+
+      .page-container .date {
+        flex-basis: 100%;
+        border: 1px solid;
+        padding: 5px;
+      }
+
+      .card-container {
+        display: flex;
+        gap: 10px;
+        flex-basis: 100%;
+        flex-flow: row wrap;
+      }
+
+      .card {
+        display: flex;
+        flex-flow: row wrap;
+        border: 1px solid;
+        flex: 1 0;
+        flex-basis: calc(50% - 10px);
+        max-width: calc(50% - 10px);
+        min-width: 400px;
+        justify-content: space-between;
+      }
+
+      .card .card-item {
+        padding: 0;
+      }
+
+      ul {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 20px;
+      }
+    </style>
+
+    <div class="nav-container">
+      <div class="nav-item">Games</div>
+      <div class="nav-item">News</div>
+      <div class="nav-item">Standings</div>
+      <div class="nav-item">Stats</div>
+      <div class="nav-item">Players</div>
+    </div>
+    <div class="page-container">
+      <div class="date">Date</div>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-item">
+            <ul>
+              <li>Team-1</li>
+              <li>Team-2</li>
+            </ul>
+          </div>
+          <div class="card-item">
+            <ul>
+              <li>Score</li>
+              <li>Date</li>
+            </ul>
+          </div>
+          <div class="card-item">
+            <img src="img/nba-logo-1.jpeg" alt="" width="100px" />
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-item">
+            <ul>
+              <li>Team-1</li>
+              <li>Team-2</li>
+            </ul>
+          </div>
+          <div class="card-item">
+            <ul>
+              <li>Score</li>
+              <li>Date</li>
+            </ul>
+          </div>
+          <div class="card-item">
+            <img src="img/nba-logo-1.jpeg" alt="" width="100px" />
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-item">
+            <ul>
+              <li>Team-1</li>
+              <li>Team-2</li>
+            </ul>
+          </div>
+          <div class="card-item">
+            <ul>
+              <li>Score</li>
+              <li>Date</li>
+            </ul>
+          </div>
+          <div class="card-item">
+            <img src="img/nba-logo-1.jpeg" alt="" width="100px" />
+          </div>
+        </div>
+      </div>
+      <div class="date">Date</div>
+    </div>
+
+    <script>
+      var cardContainer = document.querySelector(".card-container");
+      var cards = document.querySelectorAll(".card");
+      if (cards.length % 2 != 0) {
+        var newCard = document.createElement("div");
+        newCard.className = "card";
+        newCard.style.border = "1px solid transparent";
+        cardContainer.append(newCard);
+      }
+    </script>
+  </body>
+</html>
