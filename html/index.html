@@ -84,16 +84,19 @@
           team: ["Team 1", "Team 2"],
           score: "Score",
           date: "Date",
+          image: document.createElement('img')
         },
         {
           team: ["Team 1", "Team 2"],
           score: "Score",
           date: "Date",
+          image: document.createElement('img')
         },
         {
           team: ["Team 1", "Team 2"],
           score: "Score",
           date: "Date",
+          image: document.createElement('img')
         },
       ];
 
@@ -102,17 +105,30 @@
         card.className = "card";
         let cardItem1 = document.createElement("div");
         cardItem1.className = "card-item";
-        let itemLList = document.createElement("ul");
-        // itemLList.innerHTML = `<li>${item.team.map((team) => team)}</li>`;
-        let allGhaza = "";
+        let cardItem2 = document.createElement('div');
+        cardItem2.className = 'card-item';
+        let cardItem3 = document.createElement('div');
+        cardItem3.className = 'card-item';
+        let itemList1 = document.createElement("ul");
+        let itemList2 = document.createElement("ul");
+        let allGhaza = '';
         item.team.map((team) => {
           let ghaza = `<li>${team}</li>`;
           allGhaza = allGhaza + ghaza;
-          itemLList.innerHTML = allGhaza;
+          itemList1.innerHTML = allGhaza;
         });
-        cardItem1.append(itemLList);
+        let score = `<li>${item.score}</li>`
+        let date = `<li>${item.date}</li>`;
+        itemList2.innerHTML = score + date;
+        item.image.src = '../img/nba-logo-1.jpeg'
+        item.image.width = 100
+        cardItem2.append(itemList2);
+        cardItem1.append(itemList1);
+        cardItem3.append(item.image)
         card.append(cardItem1);
-        $(".card-container").append(card);
+        card.append(cardItem2);
+        card.append(cardItem3);
+        $("#tab-games .card-container").append(card);
       });
 
       function toggleTab(tabId) {
