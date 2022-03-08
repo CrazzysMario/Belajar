@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .nav-container {
   display: flex;
   flex-flow: row wrap;
@@ -14,6 +18,7 @@
 
 .nav-container .active {
   background-color: blue;
+  color: white;
 }
 
 .page-container {
@@ -43,7 +48,7 @@
   flex: 1 0;
   flex-basis: calc(50% - 10px);
   max-width: calc(50% - 10px);
-  min-width: 400px;
+  /* min-width: 400px; */
   justify-content: space-between;
 }
 
@@ -52,6 +57,8 @@
   display: flex;
   flex-flow: row wrap;
   border: 1px solid;
+  padding: 15px;
+  /* max-width: calc(100% - 10px); */
   flex: 1 0;
   border-radius: 3px;
   flex-basis: 100%;
