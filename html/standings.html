@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="nav-container">
+      <div data-id="menu-games" class="nav-item">Games</div>
+      <div data-id="menu-news" class="nav-item">News</div>
+      <div data-id="menu-standings" class="nav-item">Standings</div>
+      <div class="nav-item">Stats</div>
+      <div class="nav-item">Players</div>
+    </div>
+    <div class="page-container" id="tab-games">
+      <div class="date">Date</div>
+      <div class="card-container"></div>
+      <div class="date">Date</div>
+    </div>
+    <div class="page-container" id="tab-news">
+      <div id="page-news" class="card-container"></div>
+    </div>
+    <div class="page-container" id="tab-standings">
+      <div class="card-container" id="standings-cards">
+        <div class="season-container">
+          <div class="season">
+            <div>season</div>
+            <select class="season-list">
+              <option value="year-month">year-month</option>
+              <option value="year-month">year-month</option>
+              <option value="year-month">year-month</option>
+              <option value="year-month">year-month</option>
+            </select>
+          </div>
+        </div>
+        <div class="conference">
+          <div class="eastren">Eastern</div>
+          <div class="westren">Western</div>
+        </div>
+        <div class="example">
+          <div id="d">Team</div>
+          <div>W</div>
+          <div>L</div>
+          <div>Pct</div>
+          <div>GB</div>
+          <div>Conf</div>
+          <div>Home</div>
+          <div>Away</div>
+          <div>L10</div>
+          <div>Strk</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/toggle.js"></script>
+    <script src="../js/news.js"></script>
+    <script src="../js/games.js"></script>
+    <script src="../js/standings.js"></script>
+  </body>
+</html>

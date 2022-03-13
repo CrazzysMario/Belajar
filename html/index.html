@@ -17,144 +17,18 @@
     </div>
     <div class="page-container" id="tab-games">
       <div class="date">Date</div>
-      <div class="card-container">
-        <!--<div class="card">
-          <div class="card-item">
-            <ul>
-              <li>Team-1</li>
-              <li>Team-2</li>
-            </ul>
-          </div>
-          <div class="card-item">
-            <ul>
-              <li>Score</li>
-              <li>Date</li>
-            </ul>
-          </div>
-          <div class="card-item">
-            <img src="img/nba-logo-1.jpeg" alt="" width="100px" />
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-item">
-            <ul>
-              <li>Team-1</li>
-              <li>Team-2</li>
-            </ul>
-          </div>
-          <div class="card-item">
-            <ul>
-              <li>Score</li>
-              <li>Date</li>
-            </ul>
-          </div>
-          <div class="card-item">
-            <img src="img/nba-logo-1.jpeg" alt="" width="100px" />
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-item">
-            <ul>
-              <li>Team-1</li>
-              <li>Team-2</li>
-            </ul>
-          </div>
-          <div class="card-item">
-            <ul>
-              <li>Score</li>
-              <li>Date</li>
-            </ul>
-          </div>
-          <div class="card-item">
-            <img src="img/nba-logo-1.jpeg" alt="" width="100px" />
-          </div>
-        </div> -->
-      </div>
+      <div class="card-container" id="page-games"></div>
       <div class="date">Date</div>
     </div>
-    <div id="tab-news" class="page-container">
-      <div id="page-news" class="card-container"></div>
+    <div class="page-container" id="tab-news">
+      <div id="page-news" class="card-container">
+        
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="../js/script.js"></script>
-    <script>
-      var dataGames = [
-        {
-          team: ["Team 1", "Team 2"],
-          score: "Score",
-          date: "Date",
-          image: document.createElement('img')
-        },
-        {
-          team: ["Team 1", "Team 2"],
-          score: "Score",
-          date: "Date",
-          image: document.createElement('img')
-        },
-        {
-          team: ["Team 1", "Team 2"],
-          score: "Score",
-          date: "Date",
-          image: document.createElement('img')
-        },
-      ];
-
-      dataGames.map((item) => {
-        let card = document.createElement("div");
-        card.className = "card";
-        let cardItem1 = document.createElement("div");
-        cardItem1.className = "card-item";
-        let cardItem2 = document.createElement('div');
-        cardItem2.className = 'card-item';
-        let cardItem3 = document.createElement('div');
-        cardItem3.className = 'card-item';
-        let itemList1 = document.createElement("ul");
-        let itemList2 = document.createElement("ul");
-        let allGhaza = '';
-        item.team.map((team) => {
-          let ghaza = `<li>${team}</li>`;
-          allGhaza = allGhaza + ghaza;
-          itemList1.innerHTML = allGhaza;
-        });
-        let score = `<li>${item.score}</li>`
-        let date = `<li>${item.date}</li>`;
-        itemList2.innerHTML = score + date;
-        item.image.src = '../img/nba-logo-1.jpeg'
-        item.image.width = 100
-        cardItem2.append(itemList2);
-        cardItem1.append(itemList1);
-        cardItem3.append(item.image)
-        card.append(cardItem1);
-        card.append(cardItem2);
-        card.append(cardItem3);
-        $("#tab-games .card-container").append(card);
-      });
-
-      function toggleTab(tabId) {
-        var navItem = $(".nav-item");
-        navItem.map(function (i) {
-          if ($(this).data("id") === "menu-" + tabId) {
-            $(this).addClass("active");
-          } else {
-            $(this).removeClass("active");
-          }
-        });
-        $(".page-container").map(function (item) {
-          if ($(this).attr("id") == "tab-" + tabId) {
-            $(this).show();
-          } else {
-            $(this).hide();
-          }
-        });
-      }
-
-      $(".nav-item").click(function () {
-        var navID = $(this).data("id").substring(5);
-        toggleTab(navID);
-      });
-
-      toggleTab("games");
-    </script>
+    <script src="../js/news.js"></script>
+    <script src="../js/games.js"></script>
+    <script src="../js/toggle.js"></script>
   </body>
 </html>
