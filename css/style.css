@@ -1,3 +1,8 @@
+:root {
+  --border-width: 1px;
+}
+
+
 * {
   box-sizing: border-box;
 }
@@ -36,7 +41,7 @@
 
 .card-container {
   display: flex;
-  gap: 10px;
+  /* gap: 10px; */
   flex-basis: 100%;
   flex-flow: row wrap;
 }
@@ -52,6 +57,13 @@
   justify-content: space-between;
 }
 
+ul {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+}
+
+/* TAB NEWS */
 
 #tab-news .card {
   display: flex;
@@ -69,8 +81,81 @@
   padding: 0;
 }
 
-ul {
+/* TAB STANDINGS */
+
+#standings-cards {
+  gap: 0;
+  margin: 0;
+}
+
+#standings-cards * {
+  margin-bottom: calc(0px - var(--border-width));
+}
+
+.season-container {
   display: flex;
-  flex-flow: column wrap;
-  gap: 20px;
+  flex-basis: 100%;
+  padding: 10px;
+  border: 1px solid;
+}
+
+.season {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.season * {
+  font-size: 15px;
+}
+
+.season div {
+  font-size: 18px;
+}
+
+.season-list {
+  position: relative;
+  border: none;
+  right: 5px;
+  color: blue;
+  background: none;
+}
+
+.conference {
+  display: flex;
+  flex-basis: 100%;
+  margin-bottom: 0;
+}
+
+.conference * {
+  text-align: center;
+  flex-basis: 100%;
+  font-size: 20px;
+  border: 1px solid;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.conference .eastren {
+  margin-right: calc(0px - var(--border-width));
+}
+
+.example, .standings {
+  display: flex;
+  flex-basis: 100%;
+  border: 1px solid;
+  border-top: 0;
+  gap: 31.5px;
+  padding: 10px;
+  justify-content: flex-end;
+  /* margin-bottom: 0; */
+}
+
+.standings {
+  gap: 34px;
+}
+
+#d {
+  position: absolute;
+  left: 23px;
 }
