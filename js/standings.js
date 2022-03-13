@@ -9,9 +9,15 @@ dataStandings.map((item) => {
   var standingsList = "";
   newTeam.className = "standings";
   item.map((secItem, index) => {
-    index == 0
-      ? (standItem = `<div id="d">${secItem}</div>`)
-      : (standItem = `<div>${secItem}</div>`);
+    if(index == 0) {
+      standItem = `<div id="d">${secItem}</div>`;
+    } else if(index == 1) {
+      standItem = `<div id="a">${secItem}</div>`
+    } else if(index == 2) {
+      standItem = `<div id="c">${secItem}</div>`
+    } else {
+      standItem = `<div>${secItem}</div>`
+    }
     standingsList += standItem;
   });
   newTeam.innerHTML = standingsList;

@@ -50,7 +50,7 @@ dataGames.map((item) => {
   $("#tab-games .card-container").append(card);
 });
 
-if ($(".card").length >= 2) {
+if ($("#tab-games .card").length >= 2) {
   $(".card").css("margin-bottom", "calc(0px - 1px)");
   $(".card").css("margin-right", "calc(0px - 1px)");
 }
