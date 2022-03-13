@@ -1,13 +1,13 @@
 function toggleTab(tabId) {
   var navItem = $(".nav-item");
-  navItem.map(function (i) {
+  navItem.map(() => {
     if ($(this).data("id") === "menu-" + tabId) {
       $(this).addClass("active");
     } else {
       $(this).removeClass("active");
     }
   });
-  $(".page-container").map(function (item) {
+  $(".page-container").map(() => {
     if ($(this).attr("id") == "tab-" + tabId) {
       $(this).show();
     } else {

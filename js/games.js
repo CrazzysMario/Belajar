@@ -17,6 +17,12 @@ var dataGames = [
     date: "Date",
     image: document.createElement("img"),
   },
+  {
+    team: ["Team 1", "Team 2"],
+    score: "Score",
+    date: "Date",
+    image: document.createElement("img"),
+  },
 ];
 
 dataGames.map((item) => {
@@ -53,4 +59,11 @@ dataGames.map((item) => {
 if ($("#tab-games .card").length >= 2) {
   $(".card").css("margin-bottom", "calc(0px - 1px)");
   $(".card").css("margin-right", "calc(0px - 1px)");
+}
+
+if($('#tab-games .card').length % 4 == 0) {
+  var newDate = document.createElement('div')
+  newDate.className = 'date'
+  newDate.innerText = 'Date'
+  document.querySelector('#tab-games').appendChild(newDate)
 }
