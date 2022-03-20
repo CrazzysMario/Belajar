@@ -1,5 +1,5 @@
-async function getData(url) {
-  url = '../json/' + url;
+async function getData() {
+  var url = '../json/standings.json'
   try {
     var res = await fetch(url);
     return await res.json();
@@ -10,7 +10,7 @@ async function getData(url) {
 }
 
 async function renderStandings() {
-  var dataStandings = await getData('standings');
+  var dataStandings = await getData();
 
   dataStandings.map((item) => {
     var newTeam = document.createElement("div");
@@ -32,3 +32,5 @@ async function renderStandings() {
     document.getElementById("standings-cards").append(newTeam);
   });
 }
+
+renderStandings()
