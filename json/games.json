@@ -1,0 +1,22 @@
+[
+  {
+    "team": ["Team 1", "Team 2"],
+    "score": "Score",
+    "date": "Date"
+  },
+  {
+    "team": ["Team 1", "Team 2"],
+    "score": "Score",
+    "date": "Date"
+  },
+  {
+    "team": ["Team 1", "Team 2"],
+    "score": "Score",
+    "date": "Date"
+  },
+  {
+    "team": ["Team 1", "Team 2"],
+    "score": "Score",
+    "date": "Date"
+  }
+]
