@@ -1,5 +1,5 @@
 async function getData() {
-  var url = '../json/standings.json'
+  var url = '../php/standings.php'
   try {
     var res = await fetch(url);
     return await res.json();
